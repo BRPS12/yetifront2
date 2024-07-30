@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import PersonImage from "../../Images/news.jpg";
-import { FaArrowRight, FaArrowLeft } from "react-icons/Fa";
+import { FaArrowRight , FaArrowLeft  } from "react-icons/fa6";
 import Image1 from "../../Images/a.jpg";
 import Image2 from "../../Images/a2.jpg";
 import Image3 from "../../Images/a3.jpg";
