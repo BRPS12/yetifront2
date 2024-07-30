@@ -245,7 +245,7 @@ export const News = () => {
               </div>
               {item.image ? (
                 <img
-                  src={`http://localhost:9911/images/${item.image}`}
+                  src={`https://yetiback.onrender.com/images/${item.image}`}
                   alt={`News ${index + 1}`}
                   className="createdNewsImage"
                 />
