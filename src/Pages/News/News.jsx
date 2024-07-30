@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import PersonImage from "../../Images/news.jpg";
-import { FaArrowRight , FaArrowLeft  } from "react-icons/fa6";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import Image1 from "../../Images/a.jpg";
 import Image2 from "../../Images/a2.jpg";
 import Image3 from "../../Images/a3.jpg";
@@ -53,6 +53,10 @@ export const News = () => {
       setIsLoading(false);
     }
   };
+  const getAllImage = async () => {
+    const response = await instance.get("/images");
+    console.log(response);
+  };
   const deleteNews = async (id) => {
     try {
       await instance.delete(`/news/${id}`);
@@ -66,34 +70,7 @@ export const News = () => {
     const newsData = response.data.data;
     setNews(newsData);
     setIsLoading(false);
-    // const imageUrl = newsData[0].image;
-    // const formattedImageUrl = imageUrl.replace('Images/', ''); // remove "Images/"
-    // setNewsImage(formattedImageUrl);
-    // console.log(newsImage)
   };
-  // const createNews = async () => {
-  //   try {
-  //     setLoading(true);
-  //     const formData = new FormData();
-  //     formData.append("title", title);
-  //     formData.append("paragraph", paragraph);
-  //     formData.append("image", picture);
-
-  //     const response = await instance.post("/news/createNews", formData);
-  //     const newNewsItem = response.data.data;
-
-  //     setNews([...news, newNewsItem]);
-  //     setTitle("");
-  //     setParagraph("");
-  //     setPicture("");
-  //     setImage(null);
-  //     setEditing(false);
-  //   } catch (error) {
-  //     console.error("Error creating news:", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   const handleEdit = () => {
     setEditing(true);
   };
@@ -108,12 +85,12 @@ export const News = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
-  
+
     const formData = new FormData();
     formData.append("image", file); // Append the file to the form data
     formData.append("title", newsTitle); // Append the title to the form data
     formData.append("content", newsContent); // Append the content to the form data
-  
+
     try {
       const res = await instance.post("/news/createNews", formData, {
         headers: {
@@ -124,7 +101,7 @@ export const News = () => {
       setFile(null);
       setNewsTitle("");
       setNewsContent("");
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.error("Error creating news:", error);
     }
@@ -189,7 +166,7 @@ export const News = () => {
               boxShadow: 24,
               p: 4,
               borderRadius: "20px",
-              height: 450,
+              height: "auto",
             }}>
             <div
               style={{
@@ -201,122 +178,57 @@ export const News = () => {
                 id="modal-modal-title"
                 variant="h6"
                 component="h2"
-                style={{ fontFamily: "Georgia" }}>
+                style={{ fontFamily: "Georgia" , fontWeight : "bold"}}>
                 Create News
               </Typography>
               <IconButton onClick={handleClose} style={{ marginLeft: "auto" }}>
                 <ClearIcon />
               </IconButton>
             </div>
-            <form onSubmit={handleSubmit} encType="multipart/form-data" className="news-form">
-  <h2>Create News</h2>
-  <div className="form-group">
-    <label htmlFor="news-title">News Title:</label>
-    <input
-      type="text"
-      id="news-title"
-      placeholder="Enter news title"
-      value={newsTitle}
-      onChange={(e) => setNewsTitle(e.target.value)}
-      required
-    />
-  </div>
-  <div className="form-group">
-    <label htmlFor="news-content">News Content:</label>
-    <textarea
-      id="news-content"
-      placeholder="Enter news content"
-      value={newsContent}
-      onChange={(e) => setNewsContent(e.target.value)}
-      required
-    />
-  </div>
-  <div className="form-group">
-    <label htmlFor="image">Image:</label>
-    <input
-      type="file"
-      id="image"
-      name="image"
-      onChange={handleFileChange}
-      accept="image/*"
-      required
-    />
-  </div>
-  <button type="submit" className="submit-btn">Create News</button>
-</form>
-            {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <TextField
-                    label="Title"
-                    variant="outlined"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    fullWidth
-                    InputProps={{
-                      style: {
-                        textAlign: "center",
-                        fontFamily: "Georgia, serif",
-                        fontSize: "16px",
-                      },
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    type="text"
-                    label="Paragraph"
-                    variant="outlined"
-                    value={paragraph}
-                    InputProps={{
-                      style: {
-                        textAlign: "center",
-                        fontFamily: "Georgia, serif",
-                        fontSize: "16px",
-                      },
-                    }}
-                    onChange={(e) => setParagraph(e.target.value)}
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    type="text"
-                    label="Image Url"
-                    variant="outlined"
-                    value={picture}
-                    InputProps={{
-                      style: {
-                        textAlign: "center",
-                        fontFamily: "Georgia, serif",
-                        fontSize: "16px",
-                      },
-                    }}
-                    onChange={(e) => setPicture(e.target.value)}
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                <form onSubmit={handleFileUpload} encType="multipart/form-data">
-      <input type="file" name="image" onChange={handleFileChange} />
-      <input type="submit" value="Upload" />
-    </form>
-                </Grid>
-              </Grid>
-            </Typography> */}
-            {/* <Button
-              variant="contained"
-              onClick={createNews}
-              color="primary"
-              style={{ marginTop: "20px", marginLeft: "auto" , marginBottom : "2vh" }}
-              disabled={loading}>
-              {loading ? "Creating..." : "Create News"}
-            </Button> */}
+            <form
+              onSubmit={handleSubmit}
+              encType="multipart/form-data"
+              className="news-form">
+              <div className="form-group">
+                <label htmlFor="news-title">News Title:</label>
+                <input
+                  type="text"
+                  id="news-title"
+                  placeholder="Enter news title"
+                  value={newsTitle}
+                  onChange={(e) => setNewsTitle(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="news-content">News Content:</label>
+                <textarea
+                  id="news-content"
+                  placeholder="Enter news content"
+                  value={newsContent}
+                  onChange={(e) => setNewsContent(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="image">Image:</label>
+                <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  onChange={handleFileChange}
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <button type="submit" className="submit-btn">
+                Create News
+              </button>
+            </form>
           </Box>
         </Modal>
         <div>
           {news.map((item, index) => (
-              
             <div key={index} className="createdNewsCont">
               {user.role === "admin" ? (
                 <button
@@ -325,9 +237,7 @@ export const News = () => {
                   Delete
                 </button>
               ) : (
-                <div className="showButtonss">
-                  hahaha
-                </div>
+                <div className="showButtonss">hahaha</div>
               )}
               <div className="createdNewsLittleCont">
                 <p className="createdTitle">{item.title}</p>
@@ -335,11 +245,13 @@ export const News = () => {
               </div>
               {item.image ? (
                 <img
-                  src={require(`../../Images/${item.image}`)}
+                  src={`http://localhost:9911/images/${item.image}`}
                   alt={`News ${index + 1}`}
                   className="createdNewsImage"
                 />
-              ) : (<></>)}
+              ) : (
+                <></>
+              )}
             </div>
           ))}
         </div>
