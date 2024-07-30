@@ -38,7 +38,7 @@ export const Header = ({
   useEffect(() => {
     setMenuVisible(false);
     getUser();
-  }, [location]);
+  }, []);
 
   const form = () => {
     window.open("https://forms.gle/3sA2YV6zXUcdZFuk7");
