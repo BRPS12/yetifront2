@@ -120,7 +120,7 @@ export const News = () => {
           "Content-Type": "multipart/form-data",
         },
       });
-      setNews((prevNews) => [...prevNews, res.data.data]);
+      setNews([...news, res.data.data]);
       setFile(null);
       setNewsTitle("");
       setNewsContent("");
