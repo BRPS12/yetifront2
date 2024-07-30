@@ -202,9 +202,10 @@ export const News = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="news-content">News Content:</label>
-                <textarea
-                  id="news-content"
-                  placeholder="Enter news content"
+                <input
+                  type="text"
+                  id="news-title"
+                  placeholder="Enter news title"
                   value={newsContent}
                   onChange={(e) => setNewsContent(e.target.value)}
                   required
@@ -245,7 +246,7 @@ export const News = () => {
               </div>
               {item.image ? (
                 <img
-                  src={`https://yetiback.onrender.com/images/${item.image}`}
+                  src={`http://localhost:9911/images/${item.image}`}
                   alt={`News ${index + 1}`}
                   className="createdNewsImage"
                 />
