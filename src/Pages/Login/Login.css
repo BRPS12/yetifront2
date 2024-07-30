@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loginContainer {
+    width: 100%;
+    height: 105vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.loginBox {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.boxTwo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkBox {
+    outline: 1px solid #02B589;
+}
+
+.boxThree {
+    width: 100%;
+}
+
+.boginooP {
+    font-size: 32px;
+    font-weight: bold;
+    color: #02B589;
+}
+
+.labels {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.inps {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+    outline: none;
+    background-color: #444444;
+    color: #FFFFFF;
+}
+
+.linkStyle {
+    color: #FFFFFF;
+}
+
+.checkLabel {
+    color: #02B589;
+}
+
+.clickGreen {
+    width: 100%;
+    height: 41px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #02B589;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.newUser {
+    color: #02B589;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 600px) {
+    .loginBox {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .labels {
+        font-size: 14px;
+    }
+
+    .inps {
+        font-size: 16px;
+    }
+}

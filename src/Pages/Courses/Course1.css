@@ -1,0 +1,177 @@
+.fontFamily {
+  font-family: Georgia, sans-serif;
+}
+.background {
+  padding: 20px;
+  background: linear-gradient(300deg, #fc90cf, #fe0f3e);
+  padding-bottom: 100px;
+}
+.firstContainer {
+  margin-bottom: 20px;
+  width: 90vw;
+}
+.course1Title {
+  font-size: 30px;
+  color: #fff;
+  font-family: Georgia;
+  margin-left: 40px;
+  text-align: center;
+  border-width: 0;
+}
+.firstRow {
+  display: flex;
+  flex-direction: row;
+}
+.contForText {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-width: 1px;
+  border-radius: 40px;
+  border-color: #000;
+  border-style: solid;
+  width: 46vw; /* Adjusted to match the inline style */
+  font-weight: lighter;
+  margin-left: 30px;
+  background: linear-gradient(#ffe1f2, #fff);
+  box-shadow: 1px 4px 6px #555;
+  margin-right: 30px;
+  height: auto;
+}
+.firstParagraph {
+  font-size: 24px;
+  line-height: 1.6;
+  padding: 30px;
+  margin-left: 20px;
+}
+.secondCont {
+  margin-bottom: 20px;
+  width: 37vw; /* Adjust as needed */
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 30px;
+  margin-left: 30px;
+  box-shadow: 1px 4px 6px #333;
+  background: linear-gradient(#ffe1f2, #fff);
+}
+.secondContParagraph {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #000;
+  padding: 20px;
+  margin-left: 20px;
+}
+.thirdCont {
+  margin-bottom: 20px;
+  width: 55vw;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 30px;
+  margin-left: 30px;
+  box-shadow: 1px 4px 6px #333;
+  background: linear-gradient(#ffe1f2, #fff);
+  margin-top: 20px;
+}
+.thridContParagraph {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #000;
+  padding: 20px;
+  margin-left: 20px;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  margin-left: 130px;
+}
+.secondRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.addButtonCont {
+    position: absolute;
+    top: 102.5vh;
+    width: auto;
+    height: auto;
+    left: 2vw;
+}
+.course1Add {
+  width: 7vw;
+  height: 7vh;
+  border-radius: 1vw;
+  border-color: #fff;
+  border-width: 0;
+  cursor: pointer;
+  background-color: #ba39ff;
+  color: #fff;
+  font-size: 18px;
+  font-family: Georgia;
+}
+@media only screen and (max-width: 600px) {
+  .course1Title {
+    font-size: 3.5vh !important;
+    color: #fff;
+    font-family: Georgia;
+    text-align: center;
+    margin: 0;
+    border: none;
+    border-width: 0;
+  }
+  .background {
+    display: flex;
+    flex-direction: column;
+  }
+  .contForText {
+    margin: 0 !important;
+    height: auto;
+    width: auto;
+  }
+  .firstParagraph {
+    font-size: 2.5vh !important;
+    padding: 2vh !important;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+  }
+  .secondCont {
+    height: auto;
+    width: auto;
+    margin: 0;
+    margin-top: 3vh;
+  }
+  .secondContParagraph {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    color: #000;
+  }
+  .thirdCont {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+  }
+  .thridContParagraph {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    color: #000;
+  }
+  .image {
+    width: 34vw;
+    height: auto;
+    margin: 0;
+  }
+  .firstRow {
+    flex-direction: column;
+  }
+  .secondRow {
+    display: flex;
+    flex-direction: column;
+  }
+}

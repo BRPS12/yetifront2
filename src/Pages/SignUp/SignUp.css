@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signUpCont {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.logotitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpBox {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.burtguuleh {
+    font-size: 32px;
+    font-weight: bold;
+    color: #02B589;
+    margin-top: 20px;
+}
+
+.signYetiLogo {
+    width: 30vh;
+    height: auto;
+    border-radius: 5vh
+}
+
+.seperatedDiv {
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.signup-form-group {
+    width: 100%;
+}
+
+.signup-label {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.signup-input {
+    width: 25vw;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+    outline: none;
+    background-color: #f0f0f0;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.signup-btn {
+    width: 100%;
+    height: 41px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #02B589;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.5vw;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .signUpBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .signUpCont {
+        height: 130vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        padding-bottom: 8vh;
+    }
+    .signYetiLogo {
+        width: 20vh;
+        margin-top: 10vh;
+        border-radius: 18px;
+    }
+
+    .burtguuleh {
+        font-size: 4vh;
+    }
+
+    .seperatedDiv {
+        margin-left: 10px;
+    }
+    .login-link {
+        font-size: 3vh;
+    }
+    .signup-input {
+        width: 67vw;
+    }
+}

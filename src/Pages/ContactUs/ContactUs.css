@@ -1,0 +1,97 @@
+.contactUsCont {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-bottom: 15vh;
+  align-items: center;
+}
+.contactUsInfoCont {
+  margin-left: 10vw;
+  font-family: Georgia;
+  margin-top: 10vh;
+}
+.xolboobarix {
+  font-size: 40px;
+  font-family: Georgia;
+}
+.contactUsInfo {
+  font-size: 25px;
+  font-weight: lighter;
+  padding-top: 30px;
+}
+.logos {
+  width: 50px;
+  height: 50px;
+}
+.logos2 {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 0.35vh;
+}
+
+.contactSecondCont {
+    margin-left: 10vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-right: 40px;
+}
+.yetiName {
+    font-size: 35px;
+    text-align: center;
+    font-family: Georgia;
+}
+.yetiImage {
+    width: 26vw;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+@media only screen and (max-width: 600px) {
+  .xolboobarix {
+    font-size: 3.8vh;
+    text-align: center;
+    margin-top: 5vh;
+  }
+  .contactUsInfoCont {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contactUsCont {
+    flex-direction: column;
+    padding-bottom: 4vh !important;
+  }
+  .contactUsInfo {
+    text-align: center;
+    font-size: 3vh;
+  }
+  .contactUsInfo span {
+    flex-direction: column;
+    display: flex;
+    margin-top: 1vh;
+    margin-left:1vh;
+    margin-right:1vh
+  }
+  .contactSecondCont {
+    height: 50vh;
+    margin: 0 !important;
+  }
+  .yetiImage {
+    width: 50vw;
+  }
+  .yetiName {
+    font-size: 3.8vh;
+    width: 60vw;
+    margin-top: 1vh;
+  }
+}

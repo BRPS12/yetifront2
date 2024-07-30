@@ -1,0 +1,154 @@
+.footer-container {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 100%; /* Set a maximum width for the footer container */
+  margin: 0 auto; /* Center the footer container horizontally */
+  padding-top: 20px; /* Add some padding to the footer container */
+  box-sizing: border-box;
+  padding-bottom: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;/* Add this to ensure padding is included in width */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* Set a maximum width for the footer content */
+  margin: 0 auto; /* Center the footer content horizontally */
+  padding: 0 20px; /* Add padding to the footer content */
+}
+
+.school-info ,
+h3 {
+  color: #FE01FE; /* Set a gold color for the heading */
+}
+.contact-info {
+  margin-top: 2vh;
+}
+.contact-info span {
+  text-decoration: underline;
+  font-size: 1.2vw;
+}
+
+.social-media p {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icons > * {
+  margin: 0 10px; 
+}
+
+.copyright,
+.additional-links,
+.designer-info {
+  margin-top: 20px;
+}
+
+.additional-links a {
+  color: #FE01FE;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.additional-links a:hover {
+  text-decoration: underline;
+}
+.FooterTitle {
+  font-size: 2vw;
+  margin-top: 20px;
+}
+.pagesText {
+  font-size: 1.7vw;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.active {
+  font-weight: bold;
+  color: blueviolet; /* Adjust the active link color as needed */
+}
+.firstRoww{
+  font-family: Georgia , sans-serif ;
+  margin-right: 10vw;
+}
+.secondRoww {
+  width: 40vw;
+  margin-top: 2 0px 
+}
+.infotexts {
+  font-size: 1.5vw;
+  margin-top: 2vh;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    padding : 0 !important;
+    margin : 0 !important
+  }
+  .footer-container {
+    padding: 0; /* Reduce padding on mobile devices */
+    margin: 0; /* Remove margin */
+  }
+
+  .footer-content {
+    width: auto; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .social-icons {
+    margin-top: 20px; /* Adjust spacing for social icons in mobile view */
+    justify-content: center; /* Center social icons */
+  }
+
+  .social-icons > * {
+    margin: 0 5px; /* Reduce spacing between social icons on mobile */
+  }
+  .firstRoww {
+    margin : 0
+  }
+  .secondRoww {
+    margin :0
+  }
+  .FooterTitle {
+    width: 90vw;
+    font-size: 3.2vh;
+    text-align: center;
+  }
+  .infotexts {
+    width: 90vw;
+    font-size: 2.3vh;
+  }
+  .contact-info {
+    margin-bottom: 3vh;
+  }
+  .contact-info span{
+    width: 40vw;
+    font-size: 2.5vh;
+  }
+  .social-icons {
+    margin: 0;
+    padding: 0;
+  }
+  .pagesText {
+    width: auto;
+    font-size: 2.7vh;
+  }
+  .social-icons{
+    padding-bottom: 10vh ;
+  }
+}

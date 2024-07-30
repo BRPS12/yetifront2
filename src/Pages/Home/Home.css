@@ -1,0 +1,479 @@
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mainSon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sectionTwoTitle2 {
+  font-size: 40px;
+  margin-top: 4vh;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .sectionOne {
+    flex-direction: row;
+    padding-bottom: 4.3vh !important;
+    padding-top: 4.3vh !important;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sectionOneImageDiv {
+    width: 80%;
+    margin-bottom: 3vh;
+  }
+
+  .sectionOneImage {
+    width: 13vh !important ;
+    border-radius: 10px;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    padding-bottom: 0 !important;
+  }
+
+  .sectionOneText {
+    font-size: 3vw !important; 
+    margin-left: 2vw !important;
+  }
+  .sectionTwoItem {
+    display: flex;
+    flex-direction: row;
+  }
+  .sectionTwoFirstContainer{
+    font-size: 2vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0 !important;
+    padding-top: 3.5vh;
+  }
+  .sectonTwobadge {
+    margin-left: 0.5vh !important;
+  }
+  .sectionTwoLittleContainer {
+    margin-left: 2vh !important;
+    margin-right: 1vh !important;
+  }
+  .seciontTwoLittleTitle {
+    font-weight: 500;
+    font-family: Georgia, serif;
+    font-size: 2.8vh;
+  }
+  .sectionTwotitle {
+    font-size: 3vh;
+    text-align: center;
+  }
+  .sectionTwoTitle2 {
+    font-size: 4vh;
+    margin-top: 0 ;
+    padding-top: 2.7vh;
+  }
+  .tsogtsBaidalInnerConth2 {
+    font-size: 2.8vh;
+  }
+  .threbadge {
+    width: 3.5vw;
+    height: auto;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    font-size: 1vw;
+    margin-left: -0.1vh !important;
+    box-sizing: border-box; /* Ensures width and height include padding and border */
+    display: inline-block; /* Ensures element behaves like an inline-level block element */
+  }
+  .uusgenBaigulagchCont {
+    width: 100% !important;
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+    height: 55vh !important;
+    margin-top: 2.5vh !important;
+  }
+  .mentorShipText {
+    font-size: 2vh !important;
+  }
+  .uusgenBaigulagchInnerCont {
+    margin-bottom: 1px !important;
+    font-size: 3vh !important;
+  }
+  .uusgenBaigulagchColImage {
+    width: 35vw !important;
+  }
+  .uusgenBaigulagchColParagraph {
+    width: 40vw;
+    font-size: 2vh !important;
+    margin-top: 3vh !important;
+  }
+  .sectionFourCont {
+    width: 100%;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 2%;
+  }
+  .sectionFourContImage {
+    width: 20vw !important;
+    height: auto !important;
+  }
+  .sectionFourContText {
+    width: 85vw !important;
+  }
+  .sectionFourContParagraph {
+    font-size: 2vh !important;
+  }
+  .pocketCont {
+    margin: 0;
+    padding: 0;
+  }
+  .shalgaltinTovHuvaahCont {
+    margin-top: 0 !important;
+    padding-top: 2vh;
+    padding-bottom: 0 !important;
+    margin-bottom: 4vh;
+  }
+  .outer-container {
+    width: 25vw !important;
+  }
+}
+.sectionOne {
+  display: flex;
+  width: 100%;
+  padding-bottom: 7vh;
+  padding-top: 7vh;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.sectionOneImage {
+  border-radius: 20px;
+  width: 16vw;
+  height: auto;
+}
+.sectionOneImageDiv {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionOneText {
+  width: 65%;
+  font-size: 2vw;
+  font-family: Georgia;
+  color: #fff;
+}
+.sectionTwo {
+  width: auto;
+  height: auto;
+  background: linear-gradient(45deg, #fff, #ffcece);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.sectionTwoTitle {
+  font-family: Georgia, serif;
+  font-size: 4vw;
+}
+.sectionTwoFirstContainer {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  font-size: 2vw;
+  margin-bottom: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 7vh;
+}
+.sectionTwoItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sectionTwoItem2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5vw;
+}
+.seciontTwoLittleTitle {
+  font-weight: 500;
+  font-family: Georgia, serif;
+}
+.outer-container {
+  width: 21vw;
+  font-family: Georgia, serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 4vw;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.sectionTwoLittleContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.sectionTwoinner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sectionTwotitle {
+  font-weight: 500;
+  font-family: Georgia, serif;
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+}
+
+.sectonTwobadge {
+  width: 3.5vw;
+  height: auto;
+  border-width: 1px;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  font-size: 2vw;
+  margin-left: 20px;
+}
+
+.sarBolgon {
+  width: 29vw;
+  font-family: Georgia, serif;
+  text-align: center;
+  margin-top: 10px;
+}
+.sarBolgon p.bold-text {
+  font-weight: bold;
+}
+.tsogtsBaidalCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin : 0;
+  padding: 0;
+}
+.tsogtsBaidalInnerCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+.tsogtsBaidalInnerConth2 {
+  font-weight: 500;
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+.mentorShip {
+  width: 30vw;
+  font-family: Georgia, serif;
+  text-align: center;
+  margin-top: 10px;
+}
+.mentorShipText {
+  font-size: 2.1vw;
+}
+.shalgaltinTovHuvaahCont {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7vh;
+  padding-bottom: 7vh;
+}
+.shalgaltinTovInnerCont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vw;
+  align-items: center;
+  justify-content: center;
+}
+.shalgaltinTovInnerInnerCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.shalgaltinTovTitle {
+  font-weight: 500;
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+.dassanGazraa{
+  text-align: center;
+  margin-top: 10px;
+}
+.TOEFL {
+  font-weight: bold;
+}
+.pocketCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 6vw;
+}
+.pocketContRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.huvaajTuluh {
+  font-weight: 500;
+  font-family: Georgia, serif;
+  right: 10%;
+  text-align: center;
+}
+
+.huvaajTuluhTextAlign {
+  text-align: center;
+  margin-top: 10px;
+}
+.uusgenBaigulagchCont {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin-top: 3.5vh;
+}
+.uusgenBaigulagchInnerCont {
+  font-size: 3vw;
+  font-family: Georgia, serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hrUusgen {
+  margin-top: 12px;
+}
+.uusgenBaigulagchRow {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.uusgenBaigulagchCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.uusgenBaigulagchCol2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10vw;
+}
+.uusgenBaigulagchColImage {
+  width: 30vw;
+  border-radius: 20px;
+}
+.uusgenBaigulagchColParagraph {
+  font-size: 1.5vw;
+  width: 35vw;
+  text-align: center;
+  height: 30vh;
+  height: 17vh;
+  margin-top: 40px;
+  font-family: "Times new roman", Times, serif;
+}
+.sectionThreeCont {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 17vh;
+}
+.sectionThreeInnerCont {
+  width: 21vw;
+  height: 70vh;
+  background-color: #000;
+  border-radius: 2vw;
+  margin-left: 3vw;
+}
+.sectionThreeInnerCont1 {
+  width: 21vw;
+  height: 70vh;
+  background-color: #000;
+  border-radius: 2vw;
+}
+.sectionThreeInnerContText {
+  color: #fff;
+  padding: 2vw;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.sectionFourCont {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  margin-top: 2vw;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+.sectionFourContText {
+  text-align: center;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.sectionFourContParagraph {
+  font-weight: 500;
+  font-family: Georgia, serif;
+  font-size: 2.5vw;
+}
+.sectionFourContImage {
+  margin-left: 3vw;
+  width: 23vw;
+  height: 50vh;
+  margin-right: 3vw;
+}
+.threbadge {
+  width: 3.5vw;
+  height: auto;
+  border-width: 1px;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  font-size: 2vw;
+  margin-left: 20px;
+}

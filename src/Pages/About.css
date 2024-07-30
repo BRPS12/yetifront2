@@ -1,0 +1,599 @@
+.aboutBigCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.about-timeline {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-timeline-item {
+  width: 250px;
+  font-weight: 500;
+  font-family: Georgia, serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.about-timeline-item hr {
+  margin-top: 10px;
+}
+
+.about-founder-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.about-founder-text {
+  font-size: 25px;
+  font-family: Georgia, serif;
+  width: 60%;
+  margin-left: 10%;
+}
+
+.about-founder-subtext {
+  margin-top: 1vh;
+}
+
+.about-founder-image {
+  width: 20%;
+  height: 90%;
+  margin-left: 2%;
+}
+
+.about-activity-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-activity-image-container {
+  width: 40%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.about-activity-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.about-activity-text-container {
+  margin-left: 100px;
+}
+
+.about-activity-title {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 40px;
+  width: 100px;
+}
+
+.about-activity-year {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-top: 2vh;
+}
+
+.about-activity-description {
+  width: 500px;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-top: 2vh;
+}
+
+.activity-section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image-block {
+  width: 350px;
+  height: 80%;
+  margin-left: 14vw;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.yellow-circle {
+  background-color: greenyellow;
+  margin-left: 120px;
+}
+
+.blue-circle {
+  background-color: blue;
+  margin-left: -60px;
+}
+
+.red-circle {
+  background-color: red;
+  margin-left: 120px;
+}
+
+.text-block {
+  margin-left: 8%;
+}
+
+.titleUil {
+  font-size: 40px;
+  font-family: Georgia, serif;
+}
+
+.descriptionOfUil {
+  width: 500px;
+  font-size: 22px;
+  font-family: Georgia, serif;
+  margin-top: 30px;
+}
+
+.sub-description {
+  margin-top: 2vh;
+}
+
+.divider {
+  margin-top: 15px;
+}
+
+.experience-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image-container {
+  width: auto;
+  height: auto;
+  margin-left: 12vw;
+  margin-right: 1vw;
+}
+
+.shureeBagshImage1 {
+  border-radius: 20px;
+}
+
+.text-container {
+  margin-left: 10vw;
+}
+
+.experience-block {
+  width: 80%;
+  font-size: 27px;
+  font-family: Georgia, serif;
+}
+
+.year {
+  font-size: 40px;
+}
+
+.descriptionofExp {
+  margin-top: 10px;
+}
+
+.divider {
+  margin-top: 20px;
+}
+
+.songofabout-container {
+    width: 100%;
+    height: auto;
+    font-family: Georgia, serif;
+    padding-bottom: 10vh;
+  }
+  
+  .songofabout-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .songofabout-row2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .songofabout-col-left {
+    margin-left: 70px;
+  }
+  
+  .songofabout-col-right {
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .songofabout-col-right2 {
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .songofabout-year {
+    font-size: 40px;
+  }
+  
+  .songofabout-description {
+    width: 90%;
+    font-size: 25px;
+    margin-top: 2vh;
+  }
+  
+  .songofabout-image {
+    border-radius: 20px;
+    width: 15vw;
+    margin-right: 2vw;
+  }
+  .songofabout-image2 {
+    border-radius: 20px;
+    width: 15vw;
+    margin-right: 2vw;
+    margin-left: 4vw;
+  }
+  .songofabout-description2 {
+    width: 90%;
+    font-size: 25px;
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+  .songofabout-year2 {
+    font-size: 40px;
+     margin-left: 5vw;
+  }
+  .compitition-container {
+    width: 100%;
+    height: auto;
+    font-family: Georgia, serif;
+  }
+  
+  
+  .compitition-year {
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .compitition-description {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .compitition-images {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .compitition-image {
+    border-radius: 20px;
+    width: 300px;
+    margin-left: 50px;
+  }
+  
+  .compitition-image:first-child {
+    margin-left: 0;
+  }
+  
+  .compitition-footer {
+    padding-bottom: 70px;
+  }
+  
+  .compitition-footer .compitition-year {
+    margin-top: 20px;
+  }
+  
+  .compitition-footer .compitition-description {
+    margin-top: 15px;
+  }
+
+@media only screen and (max-width: 600px) {
+  .about-container {
+    height: 40vh;
+  }
+  .about-founder-container {
+    padding: 0 !important;
+    margin-top: 4vh !important;
+    margin-bottom: 4vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-founder-text {
+    font-size: 2.3vh;
+    margin-top: 0 !important;
+    margin-right: 5vh;
+    flex-direction: column;
+    display: flex;
+    width: 85vw;
+    margin-top: 1vh !important;
+  }
+  .about-founder-image {
+    width: 16vh;
+    margin-top: 0 !important;
+    height: auto;
+    margin-top: 1vh !important;
+  }
+  .about-activity-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-activity-image-container {
+    width: 80%;
+  }
+  .about-activity-title {
+    font-size: 4.2vh;
+    text-align: center;
+    width: 100%;
+    margin-top: 1vh;
+  }
+  .activity-section {
+    height: 40vh;
+  }
+  .about-activity-year {
+    font-size: 3.5vh;
+    text-align: center;
+  }
+  .about-activity-description {
+    width: 100%;
+    font-size: 2.8vh;
+    text-align: center;
+    padding-left: 1.7vh;
+    padding-right: 1.7vh;
+  }
+  .about-activity-text-container {
+    margin: 0;
+  }
+  .about-container {
+    height: auto;
+    margin-top: 5vh;
+  }
+  .about-timeline {
+    flex-direction: column;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .about-timeline-item {
+    padding: 0 !important;
+    width: 100vw;
+    margin-top: 2vh;
+    margin-left: 0;
+  }
+  .about-timeline-paragraph {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    font-size: 2.5vh;
+  }
+  .about-image {
+    width: 90vw;
+    margin-top: 4vh !important;
+  }
+  .activity-section {
+    height: auto;
+    padding-top: 7vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .image-block {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .circle {
+    margin-top: 0;
+  }
+  .red-circle {
+    width: 15vw;
+    height: 15vw;
+    margin-left: 5vw;
+  }
+  .blue-circle {
+    width: 15vw;
+    height: 15vw;
+    margin-right: 0;
+    margin-left: 5vw;
+  }
+  .yellow-circle {
+    width: 15vw;
+    height: 15vw;
+    margin: 0;
+  }
+  .text-block {
+    width: 100vw;
+    margin-top: 2vh;
+    text-align: center;
+    margin-left: 0 !important;
+  }
+  .titleUil {
+    font-size: 3.8vh;
+  }
+  .descriptionOfUil {
+    font-size: 2.9vh;
+    width: 100vw;
+    margin: 0;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-top: 1.5vh;
+  }
+  .sub-description {
+    font-size: 2.5vh;
+  }
+  .experience-section {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+  }
+  .image-container {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    padding-top: 7vh;
+  }
+
+  .shureeBagshImage1 {
+    width: 100vw;
+    margin: 0 !important;
+    filter: blur(0.5px) grayscale(10%) brightness(50%);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .experience-block {
+    width: 100vw;
+    text-align: center;
+    margin: 0 !important;
+    right: 55%;
+    top: 50vh;
+    position: relative;
+    transform: translate(50%, -50%); 
+    z-index: 10;
+  }
+  .year {
+    color: #fff;
+    position: relative;
+    z-index: 10;
+  }
+
+  .descriptionofExp {
+    font-size: 3vh;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    margin: 0 !important;
+    text-align: center;
+  }
+  .songofabout-container {
+    height: auto;
+    margin-top: 70vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .songofabout-row {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .songofabout-image {
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    z-index: 0; 
+    filter: blur(0.5px) grayscale(10%) brightness(45%);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .songofabout-year {
+    text-align: center;
+    width: 100vw;
+    margin-right: 16vw;
+    padding-top: 5vh;
+  }
+  .songofabout-description {
+    position: absolute;
+    top: 10vh; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    color: #fff; 
+    font-size: 3vh;
+    padding: 10px;
+    z-index: 1; 
+  }
+  .songofabout-image2 {
+      width: 100vw;
+      margin: 0 !important;
+      height: auto;
+  }
+  .songofabout-row2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .songofabout-description2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2.5vh;
+  }
+  .songofabout-year2 {
+    width: 100%;
+    text-align: center;
+    font-size: 4vh;
+  }
+  .compitition-container {
+    margin-top: 4vh;
+  }
+  .compitition-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .compitition-image {
+    margin-left: 0;
+    margin-top: 2vh;
+  }
+  .compitition-year {
+    font-size: 4vh;
+  }
+  .compitition-description {
+    font-size: 2.5vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+  }
+}
