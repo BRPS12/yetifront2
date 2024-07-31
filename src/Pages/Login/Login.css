@@ -36,10 +36,10 @@
     justify-content: space-between;
     align-items: center;
 }
-
+/* 
 .checkBox {
     outline: 1px solid #02B589;
-}
+} */
 
 .boxThree {
     width: 100%;
@@ -76,6 +76,7 @@
 
 .checkLabel {
     color: #02B589;
+    margin: 0;
 }
 
 .clickGreen {
@@ -93,7 +94,10 @@
     color: #02B589;
     text-align: center;
 }
-
+.innerBoxTwo {
+    display: flex;
+    flex-direction: row;
+}
 /* Media Queries for Responsive Design */
 
 @media screen and (max-width: 600px) {

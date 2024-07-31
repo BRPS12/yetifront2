@@ -58,7 +58,7 @@ export const Login = () => {
             </div>
             
             <div className="boxTwo">
-              <div>
+              <div className="innerBoxTwo">
                 <input type="checkbox" name="check" className="checkBox" />
                 <label htmlFor="check" className="checkLabel" style={{marginLeft : "1vh"}}>
                   Намайг санаx

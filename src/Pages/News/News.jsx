@@ -178,7 +178,7 @@ export const News = () => {
                 id="modal-modal-title"
                 variant="h6"
                 component="h2"
-                style={{ fontFamily: "Georgia" , fontWeight : "bold"}}>
+                style={{ fontFamily: "Georgia", fontWeight: "bold" }}>
                 Create News
               </Typography>
               <IconButton onClick={handleClose} style={{ marginLeft: "auto" }}>
@@ -229,32 +229,35 @@ export const News = () => {
           </Box>
         </Modal>
         <div>
-          {news.map((item, index) => (
-            <div key={index} className="createdNewsCont">
-              {user.role === "admin" ? (
-                <button
-                  className="deleteButton"
-                  onClick={() => deleteNews(item._id)}>
-                  Delete
-                </button>
-              ) : (
-                <div className="showButtonss">hahaha</div>
-              )}
-              <div className="createdNewsLittleCont">
-                <p className="createdTitle">{item.title}</p>
-                <p className="createdPara">{item.content}</p>
+          {news
+            .slice()
+            .reverse()
+            .map((item, index) => (
+              <div key={item._id} className="createdNewsCont">
+                {" "}
+                {/* Use item._id as key for better uniqueness */}
+                {user.role === "admin" ? (
+                  <button
+                    className="deleteButton"
+                    onClick={() => deleteNews(item._id)}>
+                    Delete
+                  </button>
+                ) : (
+                  <div className="showButtonss">hahaha</div>
+                )}
+                <div className="createdNewsLittleCont">
+                  <p className="createdTitle">{item.title}</p>
+                  <p className="createdPara">{item.content}</p>
+                </div>
+                {item.image && (
+                  <img
+                    src={`https://yetiback.onrender.com/images/${item.image}`}
+                    alt={`News ${index + 1}`}
+                    className="createdNewsImage"
+                  />
+                )}
               </div>
-              {item.image ? (
-                <img
-                  src={`https://yetiback.onrender.com/images/${item.image}`}
-                  alt={`News ${index + 1}`}
-                  className="createdNewsImage"
-                />
-              ) : (
-                <></>
-              )}
-            </div>
-          ))}
+            ))}
         </div>
         <div className="firstCont">
           <div className="carousel1">
