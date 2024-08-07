@@ -96,25 +96,27 @@ export const Course1 = () => {
                     />
                     <button
                       onClick={() => handleSubmit(course._id)}
-                      className="saveButton"
-                    >
+                      className="saveButton">
                       Save
                     </button>
                     <button
                       onClick={() => handleEditToggle(index)}
-                      className="saveButton"
-                    >
+                      className="saveButton">
                       Cancel
                     </button>
                   </div>
                 ) : (
                   <div className="contForText">
-                    <p className="firstParagraph">{course.content}</p>
-                    {user.role === "admin" && ( // Show edit button only for admin
+                    <p
+                      className="firstParagraph"
+                      dangerouslySetInnerHTML={{
+                        __html: course.content.replace(/\n/g, "<br>"),
+                      }}
+                    />
+                    {user.role === "admin" && (
                       <button
                         onClick={() => handleEditToggle(index)}
-                        className="editButton"
-                      >
+                        className="editButton">
                         Edit
                       </button>
                     )}
@@ -122,9 +124,15 @@ export const Course1 = () => {
                 )}
               </div>
             ))}
+            <img
+              src={require("../../Images/Shureebagsh3.jpg")}
+              alt=""
+              className="image"
+            />
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

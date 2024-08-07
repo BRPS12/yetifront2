@@ -14,7 +14,14 @@ body {
     font-family: Georgia;
     text-align: center;
   }
-  
+  .editTextArea2 {
+    width: 80vw;
+    height: 41vh;
+    border-radius: 20px; 
+    margin-top: 2.1vh;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+  }
   .card {
     border: 1px solid #000;
     border-radius: 40px;

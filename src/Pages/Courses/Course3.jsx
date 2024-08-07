@@ -10,14 +10,54 @@ export const Course3 = () => {
   const user_id = window.localStorage.getItem("user_id");
   const [isMounted, setIsMounted] = useState(false);
   const [user, setUser] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [editingCourseIndex, setEditingCourseIndex] = useState(null);
+  const [editedContent, setEditedContent] = useState("");
 
   const getUser = async () => {
-    const res = await instance.get(`/users/${user_id}`);
-    setUser(res.data.data);
+    try {
+      const res = await instance.get(`/users/${user_id}`);
+      setUser(res.data.data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const getCourse3 = async () => {
+    try {
+      const res = await instance.get("/courses/3");
+      setCourses(res.data);
+      console.log(res.data);
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+    }
   };
+  const handleEdit = (index) => {
+    setEditingCourseIndex(index);
+    setEditedContent(courses[index].content); // Load current content into the editor
+  };
+
+  const handleUpdate = async (index) => {
+    const updatedContent = {
+      content: editedContent,
+    };
+    try {
+      await instance.put(`/courses/${courses[index]._id}`, updatedContent); // Use course ID if applicable
+      setEditingCourseIndex(null); 
+      getCourse3(); // Refresh the course data
+    } catch (error) {
+      console.error("Error updating course:", error);
+    }
+  };
+
+  const handleCancelEdit = () => {
+    setEditingCourseIndex(null); 
+  };
+
   useEffect(() => {
     setIsMounted(true);
     getUser();
+    getCourse3()
   }, []);
 
   return (
@@ -29,44 +69,41 @@ export const Course3 = () => {
         repeat="no-repeat"
         bgSize="cover"
       />
-        <div className="addButtonCont">
-      {user.role === "admin" ? <button class="course3Add">Add</button> : <></>}
-      </div>
       <div className="course-content">
         <div className="course-title">
           <p>Америкийн ЕБС-н хичээлийн хөтөлбөр+ IELTS, TOEFL суурь</p>
         </div>
+
         <div className="course-info">
-          <div className="info-box" style={{marginTop : "2vh" , marginLeft : 0}}>
-            <p style={{marginTop : "3vh"}}>
-              👏Ерөнхий англи хэлний анги нь 7 хоногт 3 удаа хичээллэнэ.
-              Хичээл нь Мягмар, Пүрэв болон Бямба гаригуудад 10:00-11:30,
-              14:00-15:30 цагийн хооронд. Ерөнхий англи хэлний ангид
-              бүртгүүлснээр:
-            </p>
-            <p> 1. Сар бүр сурагчид жишиг тест хийж ахицаа харах</p>
-            <p> 2. 16 жилийн туршлагатай багш заана</p>
-            <p style={{ marginBottom : "3vh"}}>
-              3. Сар болгон сурагчийн сурлагын тайланг асран хамгаалагчид
-              мэйлээр илгээх
-            </p>
-          </div>
-          <div className="info-box" style={{marginTop : "2vh" , marginBottom : "2vh"}}>
-            <div className=" academy-info">
-              <p>Youth Educational Training Academy</p>
+          {courses.map((course, index) => (
+            <div>
+            {editingCourseIndex === index ? (
+              <div className = "info-box">
+                <textarea
+                  value={editedContent}
+                  onChange={(e) => setEditedContent(e.target.value)}
+                  rows={5}
+                  cols={50}
+                  className="editTextArea3"
+                />
+                  <button onClick={() => handleUpdate(index)} className="saveButton">Update</button>
+                  <button onClick={handleCancelEdit} className="saveButton">Cancel</button>
+              </div>
+            ) : (
+              <div className="info-box" style={{marginBottom : "2vh"}}>
+                {course.content.split("\n").map((item, idx) => (
+                  <p key={idx} style={{ marginBottom: "1vh" , marginTop: "1vh"}}>
+                    {item.trim()}
+                  </p>
+                ))}
+                {user.role === "admin" && (
+                  <button onClick={() => handleEdit(index)} className="editButton">Edit Course</button>
+                )}
+              </div>
+            )}
             </div>
-            <p>
-              {" "}
-              <p>4. Цахимаар хичээлд суух </p>
-              <p>5. Давтлагад суух</p> <p>6. Спорт зааланд тоглох </p>
-              <p>
-                7. 11-р ангиасаа Study Abroad хөтөлбөрт шууд хамрагдах гэсэн
-                боломжуудтай.
-              </p>
-              Төлбөр нийт 2.200.000 бөгөөд Pocket app-аар 3-6 хуваан төлөх
-              боломжтой
-            </p>
-          </div>
+          )
+        )}
         </div>
       </div>
       <Footer />

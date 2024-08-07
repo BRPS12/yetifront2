@@ -9,15 +9,57 @@ export const Course2 = () => {
   const user_id = window.localStorage.getItem("user_id");
   const [isMounted, setIsMounted] = useState(false);
   const [user, setUser] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [editingCourseIndex, setEditingCourseIndex] = useState(null);
+  const [editedContent, setEditedContent] = useState("");
 
   const getUser = async () => {
-    const res = await instance.get(`/users/${user_id}`);
-    setUser(res.data.data);
+    try {
+      const res = await instance.get(`/users/${user_id}`);
+      setUser(res.data.data);
+    } catch (error) {
+      console.log(error)
+    }
   };
+
+  const getCourse2 = async () => {
+    try {
+      const res = await instance.get("/courses/2");
+      setCourses(res.data);
+      console.log(res.data);
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+    }
+  };
+
+  const handleEdit = (index) => {
+    setEditingCourseIndex(index);
+    setEditedContent(courses[index].content); // Load current content into the editor
+  };
+
+  const handleUpdate = async (index) => {
+    const updatedContent = {
+      content: editedContent,
+    };
+    try {
+      await instance.put(`/courses/${courses[index]._id}`, updatedContent); // Use course ID if applicable
+      setEditingCourseIndex(null); 
+      getCourse2(); // Refresh the course data
+    } catch (error) {
+      console.error("Error updating course:", error);
+    }
+  };
+
+  const handleCancelEdit = () => {
+    setEditingCourseIndex(null); 
+  };
+
   useEffect(() => {
     setIsMounted(true);
     getUser();
+    getCourse2();
   }, []);
+
   return (
     <div>
       <Header
@@ -27,48 +69,40 @@ export const Course2 = () => {
         repeat="no-repeat"
         bgSize="cover"
       />
-      <div className="addButtonCont">
-      {user.role === "admin" ? <button class="course2Add">Add</button> : <></>}
-      </div>
       <div className="container">
-      <div className="margin-bottom">
-        <p className="header">IELTS, TOEFL IBT & ITP, SAT, Duolingo бэлдэх+тэтгэлгийн зөвлөгөө, чиглүүлэг</p>
-      </div>
-      <div className="card">
-        <div className="card-content">
-          <p>Хөтөлбөр нийт 2 жил үргэлжилнэ.</p>
-          <p>🚀 Ерөнхий англи хэлний мэдлэг сэргээх /давтах/</p>
-          <p>Нийтлэг гардаг 26 дүрмийн алдаа /Залуучуудын Боловсрол Судлалын төв ТББ-н эрхлэн гаргасан гарын авлагаар хангана/</p>
-          <p>🚀 Америкийн 7,8,9,10,11,12 дугаар ангид уншиж судалдаг сэдвүүдийг түүвэрлэн бэлдсэн хөтөлбөр /хөгжөөнт дасгал, танин мэдэхүйн асуултуудтай/</p>
-          <p>🚀 TOEFL шалгалтын ярих, сонсох унших хичээлийн хөтөлбөр </p>
-          <p>Longman, Delta, болон Peterson & Еэти Боловсролын Академийн эрхлэн гаргасан ном гарын авлага болон TOEFL ITP & IBT , IELTS, SAT, Duolingo ЖИШИГ шалгалт /Бямба гариг болгон/</p>
-          <p style={{ fontWeight: "bold" }}>(Нууц мэдээлэл)</p>
-          <p>
-            Хөтөлбөрийн төлбөрт TOEFL ITP эсвэл Duolingo шалгалтын төлбөр багтсан болно.
-            <p>/TOEFL ITP болон Duolingo шалгалтаас аль нэгийг сонгоно/</p>
-          </p>
+        <div className="margin-bottom">
+          <p className="header">IELTS, TOEFL IBT & ITP, SAT, Duolingo бэлдэх+тэтгэлгийн зөвлөгөө, чиглүүлэг</p>
         </div>
-      </div>
-      <div className="flex-container">
-        <div className="small-card">
-          <div className="small-card-content">
-            <p>📈 Визний болон тэтгэлгийн ярилцлагын зөвлөгөө </p>
-            <p>📈 Стандартад нийцсэн тодорхойлох захиа бичих зөвлөгөө</p>
-            <p>📈 CV бичих зөвлөгөө</p>
-            <p>📈 Бямба гариг бүр SAT клуб</p>
-            <p>📈 Спорт зааланд тоглох боломж</p>
+        {courses.map((course, index) => (
+          <div className="card" key={index}>
+            <div className="card-content">
+              {editingCourseIndex === index ? (
+                <div className= "textareacont">
+                  <textarea
+                    value={editedContent}
+                    onChange={(e) => setEditedContent(e.target.value)}
+                    rows={5}
+                    cols={50}
+                    className="editTextArea2"
+                  />
+                    <button onClick={() => handleUpdate(index)} className="saveButton">Update</button>
+                    <button onClick={handleCancelEdit} className="saveButton">Cancel</button>
+                </div>
+              ) : (
+                <div>
+                  {course.content.split("\n").map((item, idx) => (
+                    <p key={idx} style={{ marginBottom: "1rem" }}>
+                      {item.trim()}
+                    </p>
+                  ))}
+                  {user.role === "admin" && (
+                    <button onClick={() => handleEdit(index)} className="editButton">Edit Course</button>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-        <div className="small-card">
-          <div className="small-card-content">
-            <p>💡 7 хоногт 3 удаа Англи хэлний олон улсын шалгалтанд бэлдэх сургалт /IELTS,TOEFL ITP, TOEFL IBT, SAT, DUOLINGO/</p>
-            <p>💡 Хөтөлбөрийн хүрээнд 7 хоног бүр IELTS&TOEFL жишиг шалгалт авна</p>
-            <p>💡 Сайн дурын үйл ажиллагаанд оролцох боломж</p>
-            <p>💡 Их сургууль, тэтгэлгийн эсээнүүд бичих зөвлөгөө</p>
-            <p>💡 Баталгаат орчуулга</p>
-          </div>
-        </div>
-      </div>
+        ))}
       </div>
       <Footer />
     </div>
