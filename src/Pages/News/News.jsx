@@ -191,13 +191,13 @@ export const News = () => {
               className="news-form">
               <div className="form-group">
                 <label htmlFor="news-title">News Title:</label>
-                <input
-                  type="text"
-                  id="news-title"
-                  placeholder="Enter news title"
-                  value={newsTitle}
-                  onChange={(e) => setNewsTitle(e.target.value)}
-                  required
+                <textarea 
+                type="text"
+                id="news-title"
+                placeholder="Enter news title"
+                value={newsTitle}
+                onChange={(e) => setNewsTitle(e.target.value)}
+                required
                 />
               </div>
               <div className="form-group">
