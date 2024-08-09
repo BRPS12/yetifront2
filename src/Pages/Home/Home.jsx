@@ -1,5 +1,5 @@
 import React from "react";
-import PeopleImage from "../../Images/coffee.jpg";
+import PeopleImage from "../../Images/cover1.jpg";
 import { Header } from "../../components/Header";
 import { useState, useEffect } from "react";
 import { Footer } from "../../components/Footer";

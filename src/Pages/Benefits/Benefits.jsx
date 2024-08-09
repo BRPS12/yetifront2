@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Header } from "../../components/Header";
-import benefitsImage from "../../Images/premium.jpg";
+import benefitsImage from "../../Images/cover2.jpg";
 import { Footer } from "../../components/Footer";
 import "./Benefits.css";
 import { instance } from "../../App";
