@@ -1,104 +1,104 @@
 body {
-    font-family: Georgia, sans-serif;
-  }
-  
-  .container {
-    background: linear-gradient(135deg, #FFFF01, #feb47b);
-    padding: 20px;
-    padding-bottom: 100px;
-  }
-  
-  .header {
-    font-size: 30px;
-    color: #000;
-    font-family: Georgia;
-    text-align: center;
-  }
-  .editTextArea2 {
-    width: 80vw;
-    height: 41vh;
-    border-radius: 20px; 
-    margin-top: 2.1vh;
-    font-size: 1.5vw;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  .card {
-    border: 1px solid #000;
-    border-radius: 40px;
-    box-shadow: 1px 4px 6px #555;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 90vw;
-    background-color: #fff;
-  }
-  
-  .card-content {
-    font-size: 22px;
-    line-height: 1.6;
-    color: #000;
-    padding: 20px;
-    margin-left: 20px;
-  }
-  
-  .card-content p {
-    margin-top: 10px;
-  }
-  
-  .small-card {
-    border: 1px solid #000;
-    border-radius: 30px;
-    box-shadow: 1px 4px 6px #333;
-    padding: 20px;
-    margin-left: 30px;
-    margin-top: 20px;
-    width: 55vw;
-    background-color: #fff;
-  }
-  
-  .small-card-content {
-    font-size: 22px;
-    line-height: 1.6;
-    color: #000;
-    padding: 20px;
-    margin-left: 20px;
-  }
-  
-  .small-card-content p {
-    margin-top: 10px;
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .margin-bottom {
-    margin-bottom: 20px;
-  }
-  
-  .margin-left {
-    margin-left: 30px;
-  }
-  
-  .margin-right {
-    margin-right: 30px;
-  }
-  
-  .padding-top {
-    padding-top: 50px;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  .addButtonCont {
-    position: absolute;
-    top: 102.5vh;
-    width: auto;
-    height: auto;
-    left: 2vw;
+  font-family: Georgia, sans-serif;
+}
+
+.container {
+  background: linear-gradient(135deg, #ffff01, #feb47b);
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.header {
+  font-size: 30px;
+  color: #000;
+  font-family: Georgia;
+  text-align: center;
+}
+.editTextArea2 {
+  width: 80vw;
+  height: 41vh;
+  border-radius: 20px;
+  margin-top: 2.1vh;
+  font-size: 1.5vw;
+  font-family: "Courier New", Courier, monospace;
+}
+.card {
+  border: 1px solid #000;
+  border-radius: 40px;
+  box-shadow: 1px 4px 6px #555;
+  padding: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+  width: 90vw;
+  background-color: #fff;
+}
+
+.card-content {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #000;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.card-content p {
+  margin-top: 10px;
+}
+
+.small-card {
+  border: 1px solid #000;
+  border-radius: 30px;
+  box-shadow: 1px 4px 6px #333;
+  padding: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 55vw;
+  background-color: #fff;
+}
+
+.small-card-content {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #000;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.small-card-content p {
+  margin-top: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+.margin-left {
+  margin-left: 30px;
+}
+
+.margin-right {
+  margin-right: 30px;
+}
+
+.padding-top {
+  padding-top: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+.addButtonCont {
+  position: absolute;
+  top: 102.5vh;
+  width: auto;
+  height: auto;
+  left: 2vw;
 }
 .course2Add {
   width: 5vw;
@@ -112,35 +112,35 @@ body {
   font-size: 18px;
   font-family: Georgia;
 }
-  @media only screen and (max-width: 600px) {
-    .header {
-      font-size: 4vh;
-      text-align: center;
-    }
-    .card {
-      width: auto;
-      height: auto;
-      padding: 0;
-      margin : 0
-    }
-    .card-content {
-      font-size: 2.5vh;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
-    .flex-container {
-      flex-direction: column;
-    }
-    .small-card {
-      width: auto;
-      height: auto;
-      padding : 0;
-      margin : 0;
-      margin-top : 5vh
-    }
-    .small-card-content {
-      font-size: 2.5vh;
-    }
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 4vh;
+    text-align: center;
   }
+  .card {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .card-content {
+    font-size: 2.5vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .small-card {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    margin-top: 5vh;
+  }
+  .small-card-content {
+    font-size: 2.5vh;
+  }
+}

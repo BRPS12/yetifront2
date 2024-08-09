@@ -134,7 +134,7 @@ export const About = () => {
             fontSize: "30px",
             fontFamily: "Georgia",
             marginTop: "30px",
-            marginBottom: "30px",
+            marginBottom: "10px",
           }}>
           About Us
         </h2>
