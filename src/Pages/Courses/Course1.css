@@ -105,6 +105,14 @@
   height: 3vh;
 }
 @media only screen and (max-width: 600px) {
+  .fontFamily {
+    display: flex;
+    flex-direction: column;
+  }
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+  }
   .course1Title {
     font-size: 3.5vh !important;
     color: #fff;
@@ -133,6 +141,9 @@
     flex-direction: column;
     justify-content: center;
     width: auto;
+  }
+  .saveContain {
+    margin-top: 2vh;
   }
   .secondCont {
     height: auto;
