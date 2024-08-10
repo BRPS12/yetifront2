@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;/* Add this to ensure padding is included in width */
+  flex-direction: column;
 }
 
 .footer-content {
@@ -90,6 +91,11 @@ h3 {
   font-size: 1.5vw;
   margin-top: 2vh;
 }
+.footerName {
+  font-size: 1.3vw;
+  padding-top: 4vh;
+  padding-bottom: 1.5vh;
+}
 @media screen and (max-width: 600px) {
   footer {
     padding : 0 !important;
@@ -149,6 +155,11 @@ h3 {
     font-size: 2.7vh;
   }
   .social-icons{
-    padding-bottom: 10vh ;
+    padding-bottom: 4vh ;
+  }
+  .footerName {
+    font-size: 2.5vh;
+    padding-top: 0;
+    padding-bottom: 5vh;
   }
 }

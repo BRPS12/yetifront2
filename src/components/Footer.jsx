@@ -70,6 +70,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+      <p className="footerName">Made by B.Bold-Erdene</p>
     </footer>
   );
 };
