@@ -1,8 +1,8 @@
 header {
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .yetiTitle {
   font-size: 1.5vw;
@@ -10,14 +10,14 @@ header {
 
 .yetiLogo {
   width: 5.5vw;
-                    border-radius: 2vh;
-                    margin-right: 1vw;
+  border-radius: 2vh;
+  margin-right: 1vw;
 }
 .profileImage {
   width: 10vh;
-                      height: 10vh;
-                      border-radius: 50%;
-                      margin-top: 2.5vh;
+  height: 10vh;
+  border-radius: 50%;
+  margin-top: 2.5vh;
 }
 .profileName {
   font-size: 1.5vw;
@@ -128,7 +128,7 @@ header {
   padding: 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.8vw;
   margin-bottom: 10px;
   text-decoration: underline;
@@ -141,7 +141,7 @@ header {
   padding-top: 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2.5vh;
   margin-bottom: 10px;
   text-decoration: underline;
@@ -174,31 +174,26 @@ header {
   .custom-menu {
     width: 10vw;
     display: grid;
-    grid-template-columns: repeat(3 , 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     position: absolute;
     top: 16vh;
     left: 44%;
-    transform: translateX(-50%); 
-    text-align: center; 
-    justify-content: center; 
-    align-items: center
+    transform: translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
-  .header{
+  .header {
     padding: 0 !important;
-    margin : 0 !important
-
+    margin: 0 !important;
   }
   .custom-menu-button {
     margin-right: 0;
     margin-bottom: 10px;
     font-size: 2.8vh !important;
   }
-  .dropdown-content {
-    position: absolute;
-    width: 100%;
-    left: 10vh;
-  }
+
   .menu {
     display: flex;
     align-items: center;
@@ -209,15 +204,16 @@ header {
   }
   .bigTitle {
     font-size: 5vh;
-    color : #fff;
+    color: #fff;
     margin-top: 2vh;
     text-align: center;
+    z-index: 1;
   }
   .inner-div {
     margin-bottom: 10vh !important;
   }
   .yetiLogo {
-    width : 8.5vh;
+    width: 8.5vh;
   }
   .yetiTitle {
     font-size: 2.3vh;
@@ -233,20 +229,24 @@ header {
     width: 70vw !important;
   }
   .dropdown-content {
-    width: 65vw !important;
-    left: -10vh !important;
-    height: 10vh !important;
-    padding: 0 !important;
-    margin : 0 !important;
-    margin-top: 3vh !important;
+    width: 65vw;
+    left: -5.5vh !important;
+    height: 5vh;
+    margin-top: 3vh;
+    z-index: 1 !important;
+  }
+  .bigTitle {
+    margin-top: 17vh;
   }
   .menu {
     display: flex;
-    flex-direction: row;
-    padding: 0;
+    flex-direction: column;
+    padding: 10px;
     margin: 0;
     align-items: center;
     justify-content: center;
+    width: 30vw;
+    height: auto;
   }
   .custom-second-menu-button {
     font-size: 2vh;
@@ -271,12 +271,12 @@ header {
 }
 .dropdown-content {
   position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   opacity: 0;
   transform: translateY(-10px);
   width: 12vw;
-  top : 7.5vw;
+  top: 7.5vw;
   left: 25%;
 }
 .dropdown-content.show {
@@ -312,15 +312,15 @@ header {
   width: 50vh;
   height: 6vh;
   border-radius: 20px;
-  background-color: #FF3737;
-  color: #FFFFFF;
+  background-color: #ff3737;
+  color: #ffffff;
   font-size: 18px;
   cursor: pointer;
   font-family: Georgia;
   border: 0;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease-in-out;
-  font-size: 3.5vh;  
+  font-size: 3.5vh;
   margin-top: 5vh;
   flex-direction: row;
   display: flex;
@@ -329,13 +329,12 @@ header {
 }
 
 .buttonText:hover {
-  background-color: #FF2323;
+  background-color: #ff2323;
 }
 
 .bigTitle {
   width: 80vw;
   font-size: 5vw;
-  color : #fff;
+  color: #fff;
   text-align: center;
 }
-

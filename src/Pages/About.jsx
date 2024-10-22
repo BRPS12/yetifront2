@@ -102,7 +102,7 @@ export const About = () => {
                 <textarea
                   type="text"
                   id="news-title"
-                  placeholder="Enter news title"
+                  placeholder="Enter news Content"
                   value={content}
                   onChange={handleContentChange}
                   required
