@@ -29,16 +29,17 @@ export const ContactUs = () => {
           </p>
           <p
             className="contactUsInfo">
-            Утасны дугаар : <span>7202 3719 , 8605 3719 , 9191 3719</span>
+            Утасны дугаар : <span>7202 3719 , 8905 3719 , 9191 3719</span>
           </p>
           <p className="contactUsInfo">
             Хаяг : <span>Багшийн дээд UBH төв, <br /> 15 давхар 1513 тоот</span>
             <p style={{marginTop : "3vh"}}>Ulaanbaatar, Mongolia</p>
           </p>
           <p className="contactUsInfo">
-            Э-майл :<span>yetischool.e@gmail.com</span>
+            Э-майл :<span style={{marginTop : "1vh"}}>se.gombodorj@yetinstitute.com</span>
+            <span style={{marginTop : "1vh"}}>yetischool.e@gmail.com</span>
           </p>
-          <div className="contactUsInfo">
+          <div className="contactUsInfo2">
             <a href="https://www.facebook.com/Yetieducationalacademy">
               <img
                 src={require("../../Images/facebook.jpg")}

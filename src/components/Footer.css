@@ -28,16 +28,29 @@ h3 {
 }
 .contact-info {
   margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .contact-info span {
   text-decoration: underline;
   font-size: 1.2vw;
+  margin-top: 1vh;
 }
-
 .social-media p {
   margin-bottom: 10px;
 }
-
+.contact-info3 {
+  font-size: 1.2vw;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+.contact-info3 span {
+  margin-top: 1vh;
+}
 .social-icons {
   display: flex;
   justify-content: center;
@@ -120,12 +133,21 @@ h3 {
     margin-top: 20px; /* Adjust spacing for social icons in mobile view */
     justify-content: center; /* Center social icons */
   }
-
+  .contact-info3 {
+    font-size: 2.5vh;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+  }
+  .contact-info3 span {
+    margin-top: 1vh;
+  }
   .social-icons > * {
     margin: 0 5px; /* Reduce spacing between social icons on mobile */
   }
   .firstRoww {
-    margin : 0
+    margin: 0;
   }
   .secondRoww {
     margin :0

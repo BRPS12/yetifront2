@@ -25,8 +25,10 @@ export const Footer = () => {
             </div>
           </p>
           <p
-            className="contact-info">
-            Email: <span>yetischool.e@gmail.com</span>
+            className="contact-info3">
+            Email: 
+            <span>se.gombodorj@yetinstitute.com</span>
+            <span>yetischool.e@gmail.com</span>
           </p>
         </div>
 
